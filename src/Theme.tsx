@@ -1,16 +1,14 @@
 import React, { ReactNode } from 'react';
-import { ThemeProvider } from 'styled-components'
+import { ThemeProvider } from 'styled-components';
 
-const theme = {
-
-}
+const theme = {};
 
 export interface ITheme {
-  children: ReactNode
+  children: ReactNode;
 }
 
-const Theme = ( { children }: ITheme) => {
-  return <ThemeProvider theme={theme}>{ children }</ThemeProvider>
-}
+const Theme = ({ children }: ITheme) => {
+  return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
+};
 
-export default Theme
+export default Theme;

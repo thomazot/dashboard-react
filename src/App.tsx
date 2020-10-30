@@ -1,10 +1,11 @@
 import React from 'react';
+import Routes from './Routes';
 import Theme from './Theme';
 
 function App() {
   return (
     <Theme>
-      Hello world!
+      <Routes />
     </Theme>
   );
 }
