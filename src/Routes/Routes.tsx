@@ -8,8 +8,8 @@ const Routes = () => {
     <div data-testid="routes">
       <Router basename={process.env.PUBLIC_URL}>
         <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/login" component={Login} />
+          <Route path="/" exact component={Login} />
+          <Route path="/dashboard" component={Home} />
         </Switch>
       </Router>
     </div>
