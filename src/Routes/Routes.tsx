@@ -6,7 +6,7 @@ import Home from '../pages/Home';
 const Routes = () => {
   return (
     <div data-testid="routes">
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/login" component={Login} />
