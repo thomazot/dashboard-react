@@ -25,10 +25,10 @@ jobs:
         node-version: ${{ matrix.node-version }}
 
     - name: Install dependencies
-      run: yarn
+      run: npm install
 
     - name: Run the tests and generate coverage report
-      run: yarn test --coverage
+      run: npm run test --coverage
 
     - name: Upload coverage to Codecov
       run: bash <(curl -s https://codecov.io/bash)
