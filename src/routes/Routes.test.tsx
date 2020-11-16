@@ -5,12 +5,12 @@ import Route from '.';
 
 describe('Login component', () => {
   it('Should render Route component', () => {
-    createComponent();
+    const { container } = createComponent();
 
-    expect(screen.getByTestId('routes')).toBeDefined();
+    expect(container).toBeDefined();
   });
 });
 
 function createComponent() {
-  render(<Route />);
+  return render(<Route />);
 }
