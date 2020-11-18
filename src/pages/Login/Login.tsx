@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
   Box,
   Button,
@@ -9,14 +9,28 @@ import {
 } from '@material-ui/core';
 import useStyles from './Login.style';
 import { useHistory } from 'react-router-dom';
+import useAuthProvider from 'hooks/useAuthProvider';
 
 const Login = () => {
   const classes = useStyles();
   const history = useHistory();
+  const { user, onLogin } = useAuthProvider();
 
   function handleSubmit() {
-    history.push('/dashboard');
+    if (onLogin) {
+      onLogin({
+        name: 'Thomaz',
+        email: 'thomazot@gmail.com',
+        password: '123456',
+      });
+    }
   }
+
+  useEffect(() => {
+    if (user) {
+      history.push('/dashboard');
+    }
+  }, [user, history]);
 
   return (
     <main className={classes.main}>

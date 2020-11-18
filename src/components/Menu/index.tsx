@@ -11,7 +11,7 @@ import LayersIcon from '@material-ui/icons/Layers';
 import AssignmentIcon from '@material-ui/icons/Assignment';
 
 export const mainListItems = (
-  <div>
+  <>
     <ListItem button>
       <ListItemIcon>
         <DashboardIcon />
@@ -42,11 +42,11 @@ export const mainListItems = (
       </ListItemIcon>
       <ListItemText primary="Integrations" />
     </ListItem>
-  </div>
+  </>
 );
 
 export const secondaryListItems = (
-  <div>
+  <>
     <ListSubheader inset>Saved reports</ListSubheader>
     <ListItem button>
       <ListItemIcon>
@@ -66,5 +66,5 @@ export const secondaryListItems = (
       </ListItemIcon>
       <ListItemText primary="Year-end sale" />
     </ListItem>
-  </div>
+  </>
 );
