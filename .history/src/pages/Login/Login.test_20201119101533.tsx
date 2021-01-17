@@ -13,10 +13,6 @@ describe('Login component', () => {
     const password = screen.getByLabelText(/senha/i);
     expect(password).toBeInTheDocument();
   });
-  it('Should submit login', () => {
-    createComponent();
-    
-  });
 });
 
 function createComponent() {
